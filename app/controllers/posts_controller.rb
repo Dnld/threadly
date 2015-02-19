@@ -5,4 +5,17 @@ class PostsController < ApplicationController
   	@all_posts = Post.order(created_at: :desc).all
 	end
 
+	def create
+		@new_post = Post.create(post_params)
+		if @new_post.save
+			redirect_to '/posts'
+		end
+	end
+
+	private
+	
+	def post_params
+		params.require(:post).permit(:comment)
+	end
+
 end

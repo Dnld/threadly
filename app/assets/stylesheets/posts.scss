@@ -45,7 +45,7 @@ form input:focus {
   transition: background 2s, border-left 2s;
 }
 
-button.btn {
+.btn {
   background: transparent;
   border: none;
   color: #00f28f;
@@ -55,7 +55,7 @@ button.btn {
   transition: background 2s, color 1s;
 }
 
-button.btn:hover {
+.btn:hover {
   background: #00f28f;
   color: #fff;
   transition: background 2s, color 1s;

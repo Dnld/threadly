@@ -7,10 +7,17 @@
     <div class="main">
       <div class="container">
 
-        <form class="form">
+<!--         <form class="form">
           <input id="comment" type="text" placeholder="share your thoughts">
           <button type="submit" class="btn">post</button>
         </form>
+ -->
+      <%= form_for (@new_post) do |f| %>
+      <div class="form"><%= f.text_field :comment %>
+        <div class="btn"><%= f.submit "Post", class: "btn" %></div>
+      </div>
+      <% end %>
+
 
         <ul class="comments">
           <li>Have you felt it?</li>
